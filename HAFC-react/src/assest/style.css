@@ -147,16 +147,18 @@
 
 .dropdown-menu {
   position: absolute;
-  top: calc(100% + 5.5px); 
+  top: 100%;
   left: 0;
-  background-color: #f0f8ff;
-  border-radius: 8px;
-  padding: 8px 0;
-  min-width: 200px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  display: none;
   z-index: 1000;
-  transition: opacity 0.2s ease;
+  display: none;
+  flex-direction: column;
+  min-width: 180px;
+  padding: 0;
+  margin: 0;
+  background-color: #e6f0ff;
+  border-radius: 0; 
+  box-shadow: none; 
+  border: none; 
 }
 
 .dropdown-menu li {
