@@ -7,7 +7,6 @@ function App() {
   useEffect(() => {
     AOS.init({ duration: 800, once: true })
   }, [])
-
   return <AppRouter />
 }
 
