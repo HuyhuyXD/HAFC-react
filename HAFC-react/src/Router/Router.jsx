@@ -12,6 +12,7 @@ import VanChuyen from '../pages/VanChuyen'
 import Logistic from '../pages/Logistic'
 import KhaiThacHangLe from '../pages/KhaiThacHangLe'
 import Schedule from "../pages/Schedule";
+import TuyenDungDetail from "../pages/TuyenDungDetail";
 
 export default function AppRouter() {
   return (
@@ -27,6 +28,7 @@ export default function AppRouter() {
         <Route path="/dich-vu-van-chuyen" element={<VanChuyen />} />
         <Route path="/dich-vu-logistic" element={<Logistic />} />
         <Route path="/khai-thac-hang-le" element={<KhaiThacHangLe />} />
+        <Route path="/tuyen-dung/:id" element={<TuyenDungDetail />} />
       </Routes>
       <Footer />
     </Router>

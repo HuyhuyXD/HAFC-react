@@ -47,11 +47,16 @@ function ManageSchedule() {
         return;
       }
 
-      const { data } = supabase.storage
+      const { data: urlData, error: urlError } = await supabase.storage
         .from("lich-tau")
         .getPublicUrl(fileName);
 
-      updatedImageUrl = data.publicUrl;
+      if (urlError) {
+        alert("❌ Không lấy được URL ảnh mới");
+        return;
+      }
+
+      updatedImageUrl = urlData.publicUrl;
     }
 
     const { error } = await supabase

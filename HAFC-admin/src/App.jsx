@@ -6,6 +6,8 @@ import RecruitmentPost from "./pages/RecruitmentPost";
 import ScheduleSupabase from "./pages/ScheduleSupabase";
 import ManageRecruitment from "./pages/ManageRecruitment";
 import ManageSchedule from "./pages/ManageSchedule";
+import ManageUsers from "./pages/ManageUsers"; 
+import ManageAdmins from "./pages/ManageAdmins"; 
 
 function App() {
   const isLoggedIn = localStorage.getItem("admin_logged_in") === "true";
@@ -17,11 +19,13 @@ function App() {
         {isLoggedIn ? (
           <>
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="*" element={<Navigate to="/dashboard" />} />
             <Route path="/post-recruitment" element={<RecruitmentPost />} />
             <Route path="/upload-schedule" element={<ScheduleSupabase />} />
             <Route path="/manage-recruitment" element={<ManageRecruitment />} />
             <Route path="/manage-schedule" element={<ManageSchedule />} />
+            <Route path="/manage-users" element={<ManageUsers />} />
+            <Route path="/manage-admins" element={<ManageAdmins />} /> 
+            <Route path="*" element={<Navigate to="/dashboard" />} />
           </>
         ) : (
           <Route path="*" element={<Navigate to="/login" />} />
