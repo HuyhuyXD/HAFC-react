@@ -1,11 +1,10 @@
-// src/components/Footer.jsx
-import React from 'react'
+import React from 'react';
 import '../assest/style.css';
 import '../assest/responsive.css';
 
 function Footer() {
   return (
-    <footer className="footer bg-dark text-white py-12">
+    <footer className="footer">
       <div className="container footer-container">
 
         {/* Cột 1: Logo + thông tin */}
@@ -34,18 +33,16 @@ function Footer() {
           <h4 className="footer-title">Vị trí</h4>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.905124681891!2d105.86354039999999!3d20.996439899999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac0f91dca877%3A0x24171a30a107d3c!2zROG7sSDDoW4gR3JlZW5QZWFybA!5e0!3m2!1sen!2s!4v1744098172944!5m2!1sen!2s"
-            width="100%"
-            height="200"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="HAFC map"
-          ></iframe>
+          />
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

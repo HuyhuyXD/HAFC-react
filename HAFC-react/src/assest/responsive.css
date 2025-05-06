@@ -1,33 +1,49 @@
-/* Header container */
+/* ==============================
+   == GENERAL RESPONSIVE BASE ==
+============================== */
+
+/* Đảm bảo body không bị che */
+body {
+  padding-top: 80px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 140px;
+  }
+}
+
+/* ==============================
+   == HEADER ==
+============================== */
+
 .header-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
 }
 
-/* Logo & tên công ty */
 .logo-box {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* Menu ngang mặc định */
 .nav-menu {
   display: flex;
   gap: 15px;
   list-style: none;
 }
 
-/* Dropdown gốc */
 .dropdown-menu {
   display: none;
   position: absolute;
   background-color: #fff;
   padding: 10px;
   list-style: none;
-  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
 
@@ -35,24 +51,67 @@
   display: block;
 }
 
-/* Mobile styles */
+.menu-toggle,
+.mobile-menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+/* Responsive header menu */
 @media screen and (max-width: 768px) {
   .header-flex {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .menu-toggle,
+  .mobile-menu-icon {
+    display: block;
+    font-size: 28px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background: transparent;
+    border: none;
+    cursor: pointer;
   }
 
   .nav-menu {
-    flex-direction: column;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
-    padding-left: 0;
     width: 100%;
+    padding-left: 0;
   }
 
+  .nav-menu.active,
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .nav-menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-menu li,
   .nav-menu li a {
     display: block;
-    width: 100%;
-    padding: 8px 0;
+    padding: 10px;
+    text-align: center;
   }
 
   .dropdown-menu {
@@ -62,12 +121,61 @@
   }
 }
 
+/* ==============================
+   == SIDEBAR SCHEDULE (ẩn mobile) ==
+============================== */
+@media screen and (max-width: 768px) {
+  .schedule-sidebar {
+    display: none;
+  }
+}
+
+/* ==============================
+   == MAIN CONTENT SECTIONS ==
+============================== */
+
+/* Dịch vụ, giới thiệu, v.v. */
+.section-container,
+.service-box-container,
+.about-content,
+.recruitment-list,
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+/* Box nhỏ trong từng section */
+.service-box,
+.about-box,
+.recruitment-card,
+.gallery-item {
+  flex: 1 1 300px;
+  max-width: 90%;
+}
+
+@media screen and (min-width: 768px) {
+  .service-box,
+  .about-box,
+  .recruitment-card,
+  .gallery-item {
+    max-width: 30%;
+  }
+}
+
+/* ==============================
+   == FOOTER ==
+============================== */
 
 .footer-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .footer-col {
@@ -94,62 +202,45 @@
   margin-bottom: 6px;
 }
 
-/* Mobile */
+/* Mobile footer */
 @media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+
   .footer-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 20px !important;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .footer-col {
+    max-width: 100%;
     width: 100%;
   }
 
   .footer-logo {
     display: block;
     margin: 0 auto 10px;
+    width: 100px;
   }
 
-  .footer-title,
-  .footer-links,
-  .company-name,
-  .footer-col p {
-    text-align: center;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .nav-menu {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    padding-left: 0;
-    width: 100%;
+  .footer-title {
+    font-size: 18px;
+    margin-bottom: 8px;
   }
 
-  .nav-menu li {
-    width: 100%;
+  .footer-links li {
+    margin: 6px 0;
   }
 
-  .nav-menu li a {
-    display: block;
-    padding: 10px;
-    width: 100%;
-  }
-
-  .dropdown-menu {
-    position: relative;
-    box-shadow: none;
-    padding-left: 20px;
-  }
-}
-
-
-body {
-  padding-top: 80px; /* Đảm bảo nội dung không bị che bởi header */
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    padding-top: 120px; /* Nếu header cao hơn trên mobile */
+  iframe {
+    width: 100% !important;
+    height: 200px;
   }
 }

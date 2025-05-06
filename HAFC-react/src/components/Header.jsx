@@ -1,19 +1,29 @@
-import React from 'react'
-import '../assest/style.css'
-import '../assest/responsive.css'
+import React, { useState } from 'react';
+import '../assest/style.css';
+import '../assest/responsive.css';
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header id="mainHeader" className="header">
       <div className="container header-flex">
+        {/* Logo và tên công ty */}
         <div className="logo-box">
           <img src="/assest/logo/logo.png" alt="HAFC Logo" className="logo" />
           <span className="company-name">
             Công Ty Cổ Phần Giao Nhận Vận Tải Hải An
           </span>
         </div>
-        <nav>
-          <ul className="nav-menu">
+
+        {/* Nút menu icon cho mobile */}
+        <button className="mobile-menu-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          ☰
+        </button>
+
+        {/* Menu */}
+        <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+          <ul>
             <li><a href="/">Trang chủ</a></li>
             <li><a href="/about">Giới thiệu</a></li>
             <li className="dropdown">
@@ -31,7 +41,7 @@ function Header() {
         </nav>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
