@@ -192,7 +192,7 @@
   /* Hero Section */
   .hero-section {
     position: relative;
-    background-image: url('assest/background/HAIAN\ BELL.jpg'); /* Đổi đường dẫn nếu cần */
+    background-image: url('/assest/background/HAIAN BELL.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
