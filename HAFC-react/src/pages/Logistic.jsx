@@ -34,36 +34,29 @@ function Logistics() {
         }}
       >
         <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginBottom: '24px' }}>
-          Dịch vụ Logistics
+          Dịch vụ vận chuyển container đường biển nội địa và quốc tế
         </h2>
 
+        <h3 style={{ fontWeight: 'bold', marginTop: '24px' }}>
+          Vận chuyển đường biển nội địa và quốc tế
+        </h3>
         <p style={{ marginBottom: '16px' }}>
-          HAFC cung cấp các dịch vụ vận chuyển đa phương thức cho cả tuyến nội địa và quốc tế, bao gồm: đường bộ, đường biển, đường sắt, kết hợp cùng dịch vụ khai báo hải quan.
-          Chúng tôi tối ưu hóa hành trình vận chuyển cho khách hàng từ điểm xuất phát đến đích cuối cùng một cách linh hoạt và hiệu quả.
+          Bên cạnh thế mạnh về vận chuyển đường bộ, HAFC còn khai thác dịch vụ vận chuyển đường biển nội địa và quốc tế thông qua đội tàu container của hãng tàu Hải An – đơn vị mẹ trong hệ sinh thái logistics toàn diện.
+        </p>
+        <p style={{ marginBottom: '16px' }}>
+          Với đội tàu container lớn nhất Việt Nam gồm 16 chiếc, có sức chở đa dạng từ 800 TEUs đến 3.500 TEUs, HAFC đáp ứng linh hoạt nhu cầu vận chuyển từ hàng lẻ đến hàng lớn cho các đối tác trong và ngoài nước.
+        </p>
+        <p style={{ marginBottom: '16px' }}>
+          Các cảng đang khai thác bao gồm Hải Phòng, TP.HCM, Đà Nẵng, Vũng Tàu, Thanh Hóa, Long An và kết nối quốc tế tới Hong Kong, Nansha / Qinzhou (Trung Quốc), Port Klang (Malaysia), Kattupalli (Ấn Độ),...  
+          Đây là lợi thế quan trọng giúp HAFC cung cấp dịch vụ door-to-door đa phương thức, rút ngắn thời gian vận chuyển và kiểm soát chi phí hiệu quả.
         </p>
 
-        <h3 style={{ fontWeight: 'bold', marginTop: '24px' }}>Vận chuyển liên vận quốc tế</h3>
-        <p style={{ marginBottom: '16px' }}>
-          Bên cạnh thị trường nội địa, HAFC cung cấp giải pháp vận chuyển liên vận giữa các quốc gia như Trung Quốc, Việt Nam, Lào, Campuchia và Thái Lan,
-          đáp ứng tốt nhu cầu mở rộng chuỗi cung ứng xuyên biên giới cho các doanh nghiệp.
-        </p>
-
-        <h3 style={{ fontWeight: 'bold', marginTop: '24px' }}>Đầu tư đội xe và mở rộng quy mô</h3>
-        <p style={{ marginBottom: '16px' }}>
-          Với việc đầu tư mới 20 xe container hiện đại cùng chiến lược mở rộng quy mô liên tục, HAFC luôn sẵn sàng đáp ứng khối lượng vận chuyển lớn và yêu cầu đặc thù của từng ngành hàng.
-        </p>
-
-        <h3 style={{ fontWeight: 'bold', marginTop: '24px' }}>Tuyến vận chuyển chiến lược</h3>
-        <p style={{ marginBottom: '16px' }}>
-          Chúng tôi vận hành tuyến trọng điểm: Hải Phòng – Cái Mép – TP. Hồ Chí Minh – Đà Nẵng – Hải Phòng, kết nối hiệu quả giữa các trung tâm kinh tế lớn.
-        </p>
-
-        <h3 style={{ fontWeight: 'bold', marginTop: '24px' }}>Vai trò đại lý hãng tàu Hải An</h3>
+         <h3 style={{ fontWeight: 'bold', marginTop: '24px' }}>Vai trò đại lý hãng tàu Hải An</h3>
         <p style={{ marginBottom: '16px' }}>
           Với vai trò là đại lý chính thức của hãng tàu Hải An, HAFC sở hữu nhiều lợi thế về lịch trình, kiểm soát vận hành và tối ưu chi phí vận tải đường biển.
         </p>
 
-        <h3 style={{ fontWeight: 'bold', marginTop: '24px' }}>Khách hàng tiêu biểu</h3>
+        <h3 style={{ fontWeight: 'bold', marginTop: '30px' }}>Khách hàng tiêu biểu</h3>
         <p style={{ marginBottom: '16px' }}>
           HAFC tự hào là đối tác logistics của nhiều doanh nghiệp lớn như SUNTORY PEPSICO, MASAN, NUTIFOOD, VIFON, DAESANG/MIWON.
         </p>
@@ -71,7 +64,7 @@ function Logistics() {
         <h3 style={{ fontWeight: 'bold', marginTop: '30px' }}>Cam kết từ HAFC</h3>
         <ul style={{ listStyle: 'none', padding: 0, marginTop: '16px' }}>
           <li>📦 Giao hàng an toàn, nguyên trạng</li>
-          <li>⏱ Tiến độ chính xác, minh bạch</li>
+          <li>⏱  Tiến độ chính xác, minh bạch</li>
           <li>📊 Theo dõi hành trình trực tuyến</li>
           <li>📄 Hỗ trợ thủ tục hải quan nhanh chóng</li>
         </ul>

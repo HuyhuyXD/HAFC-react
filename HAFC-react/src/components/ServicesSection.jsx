@@ -11,23 +11,23 @@ function ServicesSection() {
         <div className="service-list">
           <div className="service-box">
             <img src="/assest/img/van tai da phuong thuc.jpg" alt="Vận chuyển" />
-            <h3>Giao nhận vận chuyển</h3>
+            <h3>Dịch vụ vận tải đường bộ xuyên biên giới</h3>
             <p>
-              HAFC cung cấp dịch vụ vận chuyển hàng hóa nội địa theo hình thức door-to-door, đảm bảo quy trình giao nhận khép kín từ kho gửi đến kho nhận.
+              Với đội xe container 20 chiếc đầu tư mới và tiếp tục mở rộng, HAFC cung cấp trọn gói dịch vụ vận chuyển đường bộ xuyên biên giới qua Trung Quốc - Việt Nam - Lào / Campuchia - Thái Lan với thời gian chỉ từ 2-3 ngày và chi phí tiết kiệm nhất.
             </p>
           </div>
           <div className="service-box">
             <img src="/assest/img/Alfa 01.jpg" alt="Vận chuyển" />
-            <h3>Dịch vụ logistics</h3>
+            <h3>Dịch vụ vận chuyển container đường biển nội địa và quốc tế</h3>
             <p>
-              HAFC cung cấp các dịch vụ vận chuyển đa phương thức cho cả tuyến nội địa và quốc tế, bao gồm: đường bộ, đường biển, đường sắt
+              Sử dụng đội tàu container lớn nhất Việt Nam 16 chiếc với cỡ tàu từ 800 TEUs-3500 TEUs của hãng tàu Hải An. Các cảng đang khai thác tàu bao gồm Hải Phòng, HCM, Đà Nẵng, Vũng Tàu, Thanh Hóa, Long An, HongKong, Nansha / Qinzhou (Trung Quốc), Port Klang (Malaysia), Kattupalli (Ấn Độ), ...
             </p>
           </div>
           <div className="service-box">
             <img src="/assest/img/khai thac hang le.jpg" alt="Vận chuyển" />
-            <h3>Khai thác hàng lẻ</h3>
+            <h3>Dịch vụ giao nhận vận chuyển đa phương thức kho - kho</h3>
             <p>
-              Dịch vụ khai thác hàng lẻ của HAFC là giải pháp tối ưu dành cho các doanh nghiệp có nhu cầu vận chuyển những lô hàng có khối lượng hoặc số lượng nhỏ
+               Sử dụng linh hoạt các phương thức vận tải đa phương thức tích hợp đường sắt, đường bộ, đường thủy nội địa, và đường biển để đưa ra các phương án vận chuyển từ kho đến kho tối ưu nhất theo nhu cầu của quý khách hàng.
             </p>
           </div>
         </div>

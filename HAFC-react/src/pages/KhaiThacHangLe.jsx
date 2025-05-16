@@ -39,37 +39,24 @@ export default function KhaiThacHangLe() {
         }}
       >
         <h2 style={{ fontSize: '32px', fontWeight: 'bold', marginBottom: '20px' }}>
-          Dịch vụ khai thác hàng lẻ
+          Dịch vụ giao nhận vận chuyển đa phương thức kho - kho
         </h2>
 
+        <h3 style={{ fontWeight: 'bold', marginTop: '24px' }}>
+          Giải pháp vận tải đa phương thức linh hoạt
+        </h3>
         <p style={{ marginBottom: '16px' }}>
-          Dịch vụ khai thác hàng lẻ (LCL) của HAFC là giải pháp tối ưu dành cho các doanh nghiệp có nhu cầu vận chuyển những lô hàng có khối lượng hoặc số lượng không đủ để đóng nguyên container (FCL).
-          Thay vì phải chịu toàn bộ chi phí cho một container, khách hàng có thể chia sẻ không gian với những đơn vị khác – giúp tiết kiệm chi phí và vẫn đảm bảo hiệu quả vận chuyển.
+          Tận dụng mạng lưới hạ tầng và phương tiện đa dạng, HAFC linh hoạt triển khai các phương án vận chuyển đa phương thức tích hợp,
+          kết hợp hiệu quả giữa đường sắt, đường bộ, đường thủy nội địa và đường biển nhằm đáp ứng mọi yêu cầu vận chuyển từ đơn giản đến phức tạp.
         </p>
-
-        <h3 style={{ fontWeight: 'bold', marginTop: '24px' }}>Giải pháp linh hoạt – Tối ưu chi phí</h3>
         <p style={{ marginBottom: '16px' }}>
-          Với hệ thống kho bãi và mạng lưới phân phối trải rộng, HAFC thực hiện gom hàng từ nhiều khách hàng tại các điểm tập kết, tiến hành phân loại, đóng gói, dán nhãn đầy đủ trước khi sắp xếp vào container.
-          Tại điểm đến, chúng tôi tiếp tục chia lô và giao hàng tận nơi theo yêu cầu.
+          Chúng tôi không chỉ cung cấp dịch vụ giao nhận đơn thuần, mà còn tư vấn chiến lược logistics phù hợp với từng loại hàng hóa, tuyến đường và ngân sách của khách hàng.
+          Mỗi hành trình đều được thiết kế như một giải pháp “đo ni đóng giày”, đảm bảo sự cân bằng giữa tốc độ – chi phí – độ tin cậy.
         </p>
-
-        <ul style={{ listStyle: 'none', paddingLeft: 0, marginBottom: '24px' }}>
-          <li>📦 Gom hàng từ nhiều nguồn – xử lý nhanh gọn</li>
-          <li>🛃 Hỗ trợ khai báo hải quan – thủ tục trọn gói</li>
-          <li>📍 Theo dõi hành trình – giao hàng đúng tiến độ</li>
-        </ul>
-
-        <h3 style={{ fontWeight: 'bold', marginTop: '24px' }}>Khách hàng phù hợp</h3>
-        <p style={{ marginBottom: '16px' }}>
-          Dịch vụ này đặc biệt phù hợp với doanh nghiệp vừa và nhỏ, các đơn vị có nhu cầu vận chuyển hàng hóa định kỳ nhưng chưa đủ tải trọng container,
-          hoặc các công ty cần phân phối hàng đến nhiều địa điểm khác nhau.
-        </p>
-
-        <h3 style={{ fontWeight: 'bold', marginTop: '24px' }}>Đối tác và lợi thế</h3>
         <p>
-          Với vai trò là đại lý chính thức của hãng tàu Hải An, cùng kinh nghiệm lâu năm trong ngành logistics,
-          HAFC đảm bảo sự tin cậy về tiến độ, an toàn hàng hóa và minh bạch trong mọi thủ tục.
+          Với năng lực kết nối đồng bộ từ kho xuất phát đến kho đích, HAFC giúp doanh nghiệp rút ngắn thời gian luân chuyển, tối ưu hóa chuỗi cung ứng và nâng cao khả năng cạnh tranh trên thị trường.
         </p>
+
       </div>
     </section>
   );
