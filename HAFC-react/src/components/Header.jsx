@@ -8,12 +8,11 @@ function Header() {
   return (
     <header id="mainHeader" className="header">
       <div className="container header-flex">
-        {/* Logo và tên công ty */}
         <div className="logo-box">
           <img src="/assest/logo/logo.png" alt="HAFC Logo" className="logo" />
-          <span className="company-name">
-            Công Ty Cổ Phần Giao Nhận Vận Tải Hải An
-          </span>
+            <span span className="company-name">
+              CÔNG TY CỔ PHẦN GIAO NHẬN VẬN TẢI HẢI AN
+            </span>
         </div>
 
         {/* Nút menu icon cho mobile */}

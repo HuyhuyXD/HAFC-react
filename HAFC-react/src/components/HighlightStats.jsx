@@ -10,7 +10,7 @@ export default function HighlightStats() {
 
   const titleStyle = {
     fontSize: '36px',
-    color: '#003366',
+    color: '#007bff',
     marginBottom: '40px',
     fontWeight: 'bold',
   };

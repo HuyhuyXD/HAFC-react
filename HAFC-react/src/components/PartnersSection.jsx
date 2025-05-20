@@ -1,16 +1,28 @@
 // src/components/PartnersSection.jsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+function useWindowWidth() {
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  return width;
+}
+
 function PartnersSection() {
+  const windowWidth = useWindowWidth();
+
   const settings = {
     dots: false,
     infinite: true,
-    speed: 3000,
+    speed: 1000,
     autoplay: true,
-    autoplaySpeed: 0,
+    autoplaySpeed: 2000, // nhẹ lại cho mượt
     cssEase: 'linear',
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -24,24 +36,24 @@ function PartnersSection() {
   };
 
   const logos = [
-    '10513623_Logo-Miwon-Elip_resized.png',
-    'logo-nutifood-inkythuatso-17-14-02-45_resized.png',
-    'logo2_resized.png',
-    'LogoTop50_Masan_resized.png',
-    'vifon.png',
-    'Giấy Bãi Bằng.png',
-    'Chánh Dương.png',
-    'Hanacans.png',
-    'Karofi.png',
+    '10513623_Logo-Miwon-Elip_resized (1).png',
+    'Catalan (1).png',
+    'Chánh Dương (1).png',
+    'Giấy Bãi Bằng (1).png',
+    'zoomed_Thạch Bàn.png',
+    'Hanacans (1).png',
+    'Karofi (1).png',
+    'zoomed_Nutifood.png',
     'Logo-Tuong-An.webp',
-    'Perfetti.png',
+    'logo2_resized (1).png',
+    'fixed_logo-masan-group-compressed.png',
+    'final_khai_hoan.png',
     'Red_Bull_Logo.svg (1).png',
     'Rita Võ.png',
-    'Thạch Bàn.png',
-    'Catalan.png'
+    'zoomed_Perfetti.png',
+    'zoomed_Vifon.png'
   ];
 
-  // Inline styles
   const sectionStyle = {
     padding: '50px 20px',
     backgroundColor: '#fff',
@@ -60,16 +72,17 @@ function PartnersSection() {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '10px',
+    height: windowWidth < 480 ? '80px' : windowWidth < 768 ? '90px' : '100px',
+    padding: windowWidth < 480 ? '6px' : '10px',
+    boxSizing: 'border-box',
   };
 
   const logoStyle = {
-    height: '80px',
-    maxWidth: '200px',
+    maxWidth: '100%',
+    maxHeight: windowWidth < 480 ? '60px' : '80px',
     objectFit: 'contain',
     transition: 'transform 0.3s ease',
   };
-
 
   return (
     <section className="partners" data-aos="fade-up" style={sectionStyle}>

@@ -6,7 +6,7 @@ import SidebarSchedule from '../components/SidebarSchedule'
 export default function Services() {
   return (
     <section className="services-section" data-aos="fade-up">
-      <h2
+      <h2 className="services-title"
         style={{
           textAlign: 'center',
           color: '#007bff',
