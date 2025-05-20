@@ -94,7 +94,7 @@ export default function HighlightStats() {
             onMouseEnter={(e) => (e.currentTarget.style.transform = 'translateY(-5px)')}
             onMouseLeave={(e) => (e.currentTarget.style.transform = 'none')}
           >
-            <div className="highlight-icon" style={iconStyle}>📦</div>
+            <div className="highlight-icon" style={iconStyle}>⚖️</div>
             <h2 className="highlight-number" style={headingStyle}>
               <CountUp end={50000} duration={2} separator="," />
             </h2>
@@ -107,7 +107,7 @@ export default function HighlightStats() {
             onMouseEnter={(e) => (e.currentTarget.style.transform = 'translateY(-5px)')}
             onMouseLeave={(e) => (e.currentTarget.style.transform = 'none')}
           >
-            <div className="highlight-icon" style={iconStyle}>⚖️</div>
+            <div className="highlight-icon" style={iconStyle}>📦</div>
             <h2 className="highlight-number" style={headingStyle}>
               <CountUp end={700000} duration={2.5} separator="," />
             </h2>
