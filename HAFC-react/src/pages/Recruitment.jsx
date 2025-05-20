@@ -25,7 +25,7 @@ function Recruitment() {
 
   return (
     <div style={{ padding: "60px 20px", maxWidth: "900px", margin: "0 auto" }}>
-      <h2 style={{ fontSize: "28px", textAlign: "center", marginBottom: "30px" }}>
+      <h2 style={{ fontSize: "28px", textAlign: "center", marginBottom: "30px", color: "#007bff" }}>
         Thông Tin Tuyển Dụng
       </h2>
 
