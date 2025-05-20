@@ -244,3 +244,34 @@ body {
     height: 200px;
   }
 }
+
+
+/* ==============================
+   == HIGHLIGHT STATS RESPONSIVE ==
+============================== */
+@media screen and (max-width: 768px) {
+  .highlight-wrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 30px !important;
+  }
+
+  .highlight-chart,
+  .highlight-info {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .highlight-box {
+    width: 100% !important;
+    max-width: 300px !important;
+    margin: 0 auto;
+  }
+
+  .highlight-info-box {
+    padding: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+}

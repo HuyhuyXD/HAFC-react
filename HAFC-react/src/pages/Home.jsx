@@ -8,6 +8,7 @@ import AboutSection from '../components/AboutSection'
 import ServicesSection from '../components/ServicesSection'
 import PartnersSection from '../components/PartnersSection'
 import ContactSection from '../components/ContactSection'
+import HighlightStats from '../components/HighlightStats'
 
 function Home() {
   useEffect(() => {
@@ -19,6 +20,7 @@ function Home() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
+      <HighlightStats />
       <PartnersSection />
       <ContactSection />
     </main>
