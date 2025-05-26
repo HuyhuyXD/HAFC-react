@@ -5,7 +5,7 @@ import '../assest/responsive.css'
 
 function AboutSection() {
   return (
-    <section class="about" data-aos="fade-up">
+    <section className="about" data-aos="fade-up">
       <div className="container">
       <h2 style={{ textAlign: 'center', color: '#007bff', fontWeight: '600' }}>Về Chúng Tôi</h2>
         <div className="about-section">

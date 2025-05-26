@@ -10,7 +10,7 @@ function Header() {
       <div className="container header-flex">
         <div className="logo-box">
           <img src="/assest/logo/logo.png" alt="HAFC Logo" className="logo" />
-            <span span className="company-name">
+            <span className="company-name">
               CÔNG TY CỔ PHẦN GIAO NHẬN VẬN TẢI HẢI AN
             </span>
         </div>
