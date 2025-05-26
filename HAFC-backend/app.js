@@ -6,10 +6,12 @@ const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const contactRoutes = require('./routes/Contact');
 
 app.use(cors());
 app.use(express.json());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/api', contactRoutes);
 
 // ==================== Multer config cho schedule ====================
 const storageSchedule = multer.diskStorage({
