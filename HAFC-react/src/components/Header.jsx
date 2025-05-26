@@ -15,12 +15,10 @@ function Header() {
             </span>
         </div>
 
-        {/* Nút menu icon cho mobile */}
         <button className="mobile-menu-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           ☰
         </button>
 
-        {/* Menu */}
         <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <ul>
             <li><a href="/">Trang chủ</a></li>
