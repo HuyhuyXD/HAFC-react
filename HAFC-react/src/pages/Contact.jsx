@@ -38,14 +38,14 @@ function Contact() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">Liên Hệ Với Chúng Tôi</h2>
         <div className="grid md:grid-cols-2 gap-8">
-          {/* Bên trái: thông tin liên hệ */}
+          {/* Thông tin liên hệ */}
           <div className="space-y-4">
             <p><strong>Địa chỉ:</strong> Văn phòng 3B, Tầng 3, Tòa B, Tòa nhà Green Pearl, 378 Minh Khai, Hà Nội</p>
             <p><strong>Hotline:</strong> +84-24-35147888 / 0977043161</p>
             <p><strong>Fax:</strong> +84.236.3889846</p>
           </div>
 
-          {/* Bên phải: form liên hệ */}
+          {/* Form liên hệ */}
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"

@@ -43,7 +43,7 @@ export default function KhaiThacHangLe() {
         </h2>
 
         <h3 style={{ fontWeight: 'bold', marginTop: '24px' }}>
-          Giải pháp vận tải đa phương thức linh hoạt
+          Giair pháp vận tải đa phương thức linh hoạt
         </h3>
         <p style={{ marginBottom: '16px' }}>
           Tận dụng mạng lưới hạ tầng và phương tiện đa dạng, HAFC linh hoạt triển khai các phương án vận chuyển đa phương thức tích hợp,
