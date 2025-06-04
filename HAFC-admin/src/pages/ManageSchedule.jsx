@@ -3,34 +3,36 @@ import AdminLayout from "../layouts/AdminLayout";
 import { supabase } from "../supabaseClient";
 
 function ManageSchedule() {
-  const [images, setImages] = useState([]);
+  const [schedules, setSchedules] = useState([]);
   const [editingId, setEditingId] = useState(null);
   const [newDescription, setNewDescription] = useState("");
   const [newImageFile, setNewImageFile] = useState(null);
 
   useEffect(() => {
-    fetchImages();
+    fetchSchedules();
   }, []);
 
-  const fetchImages = async () => {
+  const fetchSchedules = async () => {
     const { data, error } = await supabase
       .from("lich_tau")
       .select("*")
       .order("created_at", { ascending: false });
 
-    if (!error) setImages(data);
-    else console.error("Lỗi khi fetch ảnh:", error);
+    if (!error) setSchedules(data);
+    else console.error("❌ Lỗi khi fetch lịch tàu:", error);
   };
 
-  const handleDelete = async (id, imageUrl) => {
-    if (!window.confirm("Xác nhận xóa ảnh này?")) return;
-
-    const imagePath = imageUrl.split("/storage/v1/object/public/lich-tau/")[1];
-    await supabase.storage.from("lich-tau").remove([imagePath]);
+  const handleDelete = async (id) => {
+    if (!window.confirm("Bạn có chắc muốn xoá ảnh này không?")) return;
 
     const { error } = await supabase.from("lich_tau").delete().eq("id", id);
-    if (!error) fetchImages();
-    else alert("Lỗi khi xóa khỏi database");
+    if (!error) {
+      alert("✅ Đã xoá ảnh lịch tàu!");
+      fetchSchedules();
+    } else {
+      alert("❌ Không xoá được, kiểm tra console.");
+      console.error(error.message);
+    }
   };
 
   const handleUpdate = async (id) => {
@@ -74,57 +76,49 @@ function ManageSchedule() {
       setEditingId(null);
       setNewDescription("");
       setNewImageFile(null);
-      fetchImages();
+      fetchSchedules();
     }
   };
 
   return (
     <AdminLayout>
-      <div className="form-wrapper" style={{ maxWidth: "1000px", margin: "0 auto" }}>
-        <h2 style={{ textAlign: "center", marginBottom: "30px", color: "#003366" }}>
-          Ảnh lịch tàu đã upload
+      <div className="form-wrapper" style={{ maxWidth: "900px", margin: "0 auto" }}>
+        <h2 style={{ textAlign: "center", marginBottom: 30, color: "#003366" }}>
+          Danh sách ảnh lịch tàu đã upload
         </h2>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: 24,
-            justifyContent: "center",
-            alignItems: "start",
-          }}
-        >
-          {images.length === 0 ? (
-            <p style={{ textAlign: "center", gridColumn: "1 / -1" }}>Không có ảnh nào.</p>
-          ) : (
-            images.map((img) => (
-              <div
-                key={img.id}
+
+        {schedules.length === 0 ? (
+          <p style={{ textAlign: "center" }}>Không có ảnh nào.</p>
+        ) : (
+          <ul style={{ padding: 0, listStyle: "none" }}>
+            {schedules.map((item) => (
+              <li
+                key={item.id}
                 style={{
                   background: "#fff",
                   borderRadius: 12,
                   padding: 16,
                   boxShadow: "0 2px 12px rgba(0,0,0,0.1)",
+                  marginBottom: 20,
                   textAlign: "center",
                 }}
               >
                 <img
-                  src={img.image_url}
-                  alt={img.mo_ta}
+                  src={item.image_url}
+                  alt={item.mo_ta}
                   style={{
-                    width: "100%",
-                    maxHeight: "280px",
+                    maxWidth: "100%",
+                    maxHeight: 260,
                     objectFit: "contain",
                     borderRadius: 8,
-                    boxShadow: "0 1px 6px rgba(0,0,0,0.08)",
-                    transition: "transform 0.3s ease",
+                    marginBottom: 12,
                   }}
-                  onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.03)")}
-                  onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
                 />
-                <p style={{ marginTop: 12, fontWeight: 500 }}>{img.mo_ta}</p>
-                <div style={{ display: "flex", justifyContent: "center", gap: 10 }}>
+                <p style={{ fontWeight: 500 }}>{item.mo_ta}</p>
+
+                <div style={{ display: "flex", justifyContent: "center", gap: 10, marginTop: 12 }}>
                   <button
-                    onClick={() => handleDelete(img.id, img.image_url)}
+                    onClick={() => handleDelete(item.id)}
                     style={{
                       background: "#c0392b",
                       color: "white",
@@ -138,8 +132,8 @@ function ManageSchedule() {
                   </button>
                   <button
                     onClick={() => {
-                      setEditingId(img.id);
-                      setNewDescription(img.mo_ta);
+                      setEditingId(item.id);
+                      setNewDescription(item.mo_ta);
                       setNewImageFile(null);
                     }}
                     style={{
@@ -155,7 +149,7 @@ function ManageSchedule() {
                   </button>
                 </div>
 
-                {editingId === img.id && (
+                {editingId === item.id && (
                   <div style={{ marginTop: 12, textAlign: "left" }}>
                     <input
                       type="text"
@@ -164,7 +158,7 @@ function ManageSchedule() {
                       placeholder="Mô tả mới"
                       style={{
                         width: "100%",
-                        padding: 6,
+                        padding: 8,
                         marginBottom: 8,
                         borderRadius: 4,
                         border: "1px solid #ccc",
@@ -176,7 +170,7 @@ function ManageSchedule() {
                       style={{ marginBottom: 8 }}
                     />
                     <button
-                      onClick={() => handleUpdate(img.id)}
+                      onClick={() => handleUpdate(item.id)}
                       style={{
                         background: "#27ae60",
                         color: "white",
@@ -190,10 +184,10 @@ function ManageSchedule() {
                     </button>
                   </div>
                 )}
-              </div>
-            ))
-          )}
-        </div>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </AdminLayout>
   );

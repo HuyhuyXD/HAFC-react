@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
@@ -6,11 +6,16 @@ import RecruitmentPost from "./pages/RecruitmentPost";
 import ScheduleSupabase from "./pages/ScheduleSupabase";
 import ManageRecruitment from "./pages/ManageRecruitment";
 import ManageSchedule from "./pages/ManageSchedule";
-import ManageUsers from "./pages/ManageUsers"; 
-import ManageAdmins from "./pages/ManageAdmins"; 
+import ManageUsers from "./pages/ManageUsers";
+import ManageAdmins from "./pages/ManageAdmins";
 
 function App() {
-  const isLoggedIn = localStorage.getItem("admin_logged_in") === "true";
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const loggedIn = localStorage.getItem("admin_logged_in") === "true";
+    setIsLoggedIn(loggedIn);
+  }, []);
 
   return (
     <BrowserRouter>
@@ -24,7 +29,7 @@ function App() {
             <Route path="/manage-recruitment" element={<ManageRecruitment />} />
             <Route path="/manage-schedule" element={<ManageSchedule />} />
             <Route path="/manage-users" element={<ManageUsers />} />
-            <Route path="/manage-admins" element={<ManageAdmins />} /> 
+            <Route path="/manage-admins" element={<ManageAdmins />} />
             <Route path="*" element={<Navigate to="/dashboard" />} />
           </>
         ) : (

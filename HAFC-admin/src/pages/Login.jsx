@@ -24,8 +24,8 @@ function Login() {
     if (error) {
       alert("Sai email hoặc mật khẩu");
     } else {
-      localStorage.setItem("user", JSON.stringify(data.user));
-      localStorage.setItem("admin_logged_in", "true"); // ✅ Dòng cần thiết để App.jsx hiểu đã login
+      localStorage.setItem("user", JSON.stringify({ email }));
+      localStorage.setItem("admin_logged_in", "true"); 
       alert("Đăng nhập thành công!");
       navigate("/admin");
     }
