@@ -1,7 +1,6 @@
 import React from 'react'
 import '../assest/style.css'
 import '../assest/responsive.css'
-import SidebarSchedule from '../components/SidebarSchedule'
 
 export default function Services() {
   return (
