@@ -10,9 +10,9 @@ function Header() {
       <div className="container header-flex">
         <div className="logo-box">
           <img src="/assest/logo/logo.png" alt="HAFC Logo" className="logo" />
-            <span className="company-name">
-              CÔNG TY CỔ PHẦN GIAO NHẬN VẬN TẢI HẢI AN
-            </span>
+          <span className="company-name">
+            CÔNG TY CỔ PHẦN GIAO NHẬN VẬN TẢI HẢI AN
+          </span>
         </div>
 
         <button className="mobile-menu-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -31,7 +31,27 @@ function Header() {
                 <li><a href="/khai-thac-hang-le">Dịch vụ giao nhận vận chuyển đa phương thức kho - kho</a></li>
               </ul>
             </li>
-            <li><a href="/lich-tau">Lịch tàu chạy</a></li>
+            <li className="dropdown">
+              <a href="#!" onClick={e => e.preventDefault()}>Tiện ích ▾</a>
+              <ul className="dropdown-menu clean-dropdown">
+                <li>
+                  <a href="https://haiants.vn/lich-tau-container-noi-dia-l97.html" target="_blank" rel="noopener noreferrer">
+                    Lịch tàu nội địa
+                  </a>
+                </li>
+                <li>
+                  <a href="https://haiants.vn/lich-tau-container-quoc-te-l122.html" target="_blank" rel="noopener noreferrer">
+                    Lịch tàu quốc tế
+                  </a>
+                </li>
+                <li>
+                  <a href="https://haiants.vn/lich-tau-boc-xep-tai-cang-l96.html" target="_blank" rel="noopener noreferrer">
+                    Lịch tàu bốc xếp tại cảng
+                  </a>
+                </li>
+              </ul>
+            </li>
+
             <li><a href="/tuyen-dung">Tuyển dụng</a></li>
             <li><a href="/contact">Liên hệ</a></li>
           </ul>

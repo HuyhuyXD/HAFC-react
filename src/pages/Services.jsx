@@ -78,10 +78,6 @@ export default function Services() {
               </div>
             </div>
           </div>
-
-          <aside className="sidebar" style={{ flex: 1 }}>
-            <SidebarSchedule />
-          </aside>
         </div>
       </div>
     </section>
