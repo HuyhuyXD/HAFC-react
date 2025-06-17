@@ -61,9 +61,12 @@
 
 /*Services Responsive */
 @media screen and (max-width: 768px) {
-  .services-section {
-    padding: 120px 0 40px; 
-    box-sizing: border-box;
+  .services-box {
+    width: 90%;
+  }
+
+    .main-services h2 {
+    font-size: 22px;
   }
 
   .services-wrapper {

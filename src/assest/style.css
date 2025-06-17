@@ -833,124 +833,58 @@ nav ul li a {
   
   /* service page */
   .services {
-    padding-top: 0;
-    padding-bottom: 60px;
-  }
-  
+  padding-top: 0;
+  padding-bottom: 60px;
+}
 
-  .services-grid {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .services-box {
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 12px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-  }
-  
-  .services-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .services-box img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
-  }
+/* layout chính của trang dịch vụ */
+.service-layout {
+  display: block; /* ✅ đã bỏ sidebar nên không cần flex */
+  padding-bottom: 40px;
+}
 
-  .sidebar-schedule {
-    position: sticky;
-    align-self: center;
-    top: 120px;
-    right: 0;
-    width: 240px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-left: 2px solid #007bff;
-    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    height: auto;
-  }
-  
-  .sidebar-schedule h3 {
-    font-size: 18px;
-    margin-bottom: 12px;
-    color: #007bff;
-  }
-  
-  .sidebar-schedule ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
-  }
-  
-  .sidebar-schedule li {
-    margin-bottom: 8px;
-    font-size: 14px;
-  }
+/* tiêu đề trang */
+.main-services h2 {
+  text-align: center;
+  color: #007bff;
+  font-size: 28px;
+  font-weight: bold;
+  padding-top: 40px;
+  margin-bottom: 40px;
+}
 
-  .service-layout {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    position: relative;
-    padding-bottom: 40px; /* để tránh đè footer */
-  }
+/* khối danh sách dịch vụ */
+.service-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
 
-  .main-services h2 {
-    text-align: center;
-    color: #007bff;
-    font-size: 28px;
-    font-weight: bold;
-    padding-top: 40px;     
-    margin-bottom: 40px;
-  }
+/* box dịch vụ */
+.services-box {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
 
-  .service-list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-  }
-  
-  
-  
-  
-  /* Sidebar nằm trong khung section */
-  .sidebar-schedule {
-    position: relative;
-    top: 0;
-    right: 0;
-    width: 240px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-left: 2px solid #007bff;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    height: fit-content;
-    max-height: 100%;
-    z-index: 1;
-  }
+.services-box:hover {
+  transform: translateY(-5px);
+}
 
-  .service-layout {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 24px;
-    padding: 40px 80px;
-  }
-  .service-content {
-    width: 70%;
-  }
+.services-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
 
+  
 
   /* Page thông tin dịch vụ */
   .service-detail {
