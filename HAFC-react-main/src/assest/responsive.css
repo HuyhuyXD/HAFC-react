@@ -1,0 +1,216 @@
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 150px !important;
+    box-sizing: border-box;
+  }
+}
+
+/*Header Responsive */
+
+@media screen and (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px 20px;
+  }
+
+  .logo-box {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .company-name {
+    font-size: 14px;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 16px;
+    margin-top: 12px;
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  .nav-menu li a {
+    min-width: 110px;
+    max-width: 110px;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services-container {
+    padding: 20px 16px 100px; /* ✅ Padding trái-phải và dưới để tránh dính footer */
+    box-sizing: border-box;
+  }
+
+  .services-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .main-services {
+    width: 100%;
+  }
+
+  .main-services h2,
+  .services-title {
+    font-size: 22px;
+    text-align: center;
+    padding: 0 16px;
+    margin-bottom: 24px;
+  }
+
+  .services-list,
+  .services-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .services-box {
+    width: 100%;
+    max-width: 360px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 16px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    min-height: 550px;
+  }
+
+  .services-box img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+
+  .services-box h3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #007bff;
+    word-break: break-word;
+  }
+
+  .services-box p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 16px;
+    word-break: break-word;
+  }
+
+  .btn-learn-more {
+    display: inline-block;
+    align-self: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 12px;
+  }
+}
+
+
+
+/* Footer Responsive */
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 30px 16px;
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .footer-col {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin: 0 auto 10px;
+    height: 45px;
+    max-width: 80px;
+  }
+
+  .company-name {
+    font-size: 15px;
+  }
+
+  .footer-title {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+
+  .footer-links li a {
+    display: inline-block;
+    font-size: 14px;
+  }
+
+  .footer-map-col iframe {
+    width: 100%;
+    max-width: 320px;
+    height: 180px;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+
